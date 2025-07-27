@@ -9,6 +9,7 @@
 <body>
 
   <header>
+    <img src="assets/profile.jpg" alt="Chaymae Bennouri" class="profile-pic"/>
     <h1>Chaymae Bennouri</h1>
     <nav>
       <a href="#about">About</a>
@@ -17,6 +18,8 @@
       <a href="#contact">Contact</a>
       <a href="#highlights">Highlights</a>
     </nav>
+    <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Toggle Dark Mode</button>
+
   </header>
 
   <section id="about">
@@ -34,23 +37,28 @@
   <section id="projects">
     <h2>Projects & Work</h2>
     <ul>
-      <li><strong>Master’s Thesis @ Nokia:</strong> Improved image classification using ensemble learning.</li>
-      <li><strong>Insurance Charges Prediction (Kaggle):</strong> Applied regression models to predict insurance costs based on demographic features.</li>
-      <li><strong>Water Connectivity Research:</strong> Conducted field studies to improve rural water access in Morocco.</li>
-      <li><strong>Sentiment Analysis (LSTM):</strong> Developed a deep learning model to analyze video game reviews.</li>
-      <li><strong>CoLabCareers Platform:</strong> Designed a job-matching platform using WordPress and crowd wisdom.</li>
+      <li><strong>📊 Insurance Charges Prediction (R, Kaggle):</strong> Used regression models to predict costs based on demographics and behaviors.</li>
+      <li><strong>📍 Vision 2030 Error Analysis (Excel, Deliberatorium):</strong> Identified and categorized errors to enhance national planning data.</li>
+      <li><strong>📚 Participedia Case Study:</strong> Researched the impact of civic engagement on policy-making through participatory data.</li>
+      <li><strong>💡 Source Credibility Study (Qualtrics):</strong> Designed experiments to analyze trust in explanations from expert vs. anonymous sources.</li>
+      <li><strong>🧠 CoLabCareers Platform (WordPress):</strong> Helped develop a job-matching platform using collective intelligence mechanisms.</li>
+      <li><strong>👥 Leadership in Collective Intelligence:</strong> Facilitated team collaboration research with data collection and impact assessment.</li>
+      <li><strong>🚰 Water Connectivity Research (R, Field Tools):</strong> Studied rural access to water and evaluated policy interventions.</li>
+      <li><strong>🧠 Sentiment Analysis (Python, LSTM):</strong> Built deep learning models for review classification with error analysis.</li>
+      <li><strong>📈 S&P 500 Trading Strategies (Python, R):</strong> Developed forecasting models combining crowd data and technical indicators.</li>
+      <li><strong>🎓 Academic Motivation Study (Qualtrics):</strong> Analyzed how personality traits influence learning motivation.</li>
     </ul>
   </section>
 
   <section id="resume">
-    <h2>Resume / CV</h2>
-    <p><a href="assets/Chaymae_Bennouri_CV.pdf" target="_blank">Download My Full CV (PDF)</a></p>
-    <h3>Summary</h3>
-    <ul>
-      <li><strong>Current Role:</strong> Scientific Consultant in R&D at Leyton</li>
-      <li><strong>Skills:</strong> Python, R, Java, Power BI, TensorFlow, Machine Learning, NLP, Data Analysis</li>
-      <li><strong>Languages:</strong> Arabic (native), English (fluent), French (advanced)</li>
-    </ul>
+    <h2>Resume</h2>
+    <p><strong>Current Role:</strong> Scientific Consultant – R&D at Leyton</p>
+    <p><strong>Previous Internships:</strong> Nokia, MCA-Morocco, DPS-Andzoa, 3GCOM</p>
+    <p><strong>Skills:</strong> Python, R, Java, TensorFlow, Power BI, SQL, NLP, Git, Experimental Design</p>
+    <p><strong>Languages:</strong> Arabic (native), English (fluent), French (advanced)</p>
+    <!-- In Resume Section -->
+    <p><a href="assets/Chaymae Bennouri_CV.pdf" target="_blank">📄 Download My Full CV</a></p>
+
   </section>
 
   <section id="contact">
@@ -61,18 +69,22 @@
   </section>
 
   <section id="highlights">
-    <h2>Testimonials & Highlights</h2>
+    <h2>Highlights</h2>
     <ul>
-      <li><strong>Certificates:</strong> AI Foundations, Python for Data Science, Data Visualization</li>
-      <li><strong>Ambassador:</strong> chnondir.ma & UM6P School of Collective Intelligence</li>
-      <li><strong>Mentor:</strong> DigiGirlz Initiative</li>
-      <li><strong>Volunteer:</strong> AIESEC International</li>
+      <li>🎖️ Certificates: AI Foundations, Data Visualization, Python for Data Science</li>
+      <li>🌍 Ambassador: chnondir.ma, UM6P School of Collective Intelligence</li>
+      <li>💻 Mentor: DigiGirlz</li>
+      <li>🤝 Volunteer: AIESEC International</li>
     </ul>
   </section>
 
   <footer>
     <p>© 2025 Chaymae Bennouri</p>
   </footer>
-
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+      }
+    </script>
 </body>
 </html>

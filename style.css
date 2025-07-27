@@ -77,6 +77,70 @@ footer {
   font-size: 0.9rem;
 }
 
+li {
+  margin-bottom: 0.75rem;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+.dark-toggle {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+body.dark-mode {
+  background-color: #2e2e2e;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #ffe082;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #4e342e;
+}
+
 footer p {
   margin: 0;
 }
