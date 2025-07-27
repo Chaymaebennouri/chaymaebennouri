@@ -1,4 +1,5 @@
 ✨ Chaymae Bennouri – Personal Portfolio Website
+
 This repository contains the source code for my personal portfolio website, built using HTML, CSS, and JavaScript, and hosted on GitHub Pages.
 
 The website highlights my academic journey, professional experience, research projects, and aspirations as a data science and AI enthusiast. It is designed to support my job search and PhD applications by providing a clear overview of my background, technical skills, and accomplishments.
