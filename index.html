@@ -9,17 +9,19 @@
 <body>
 
   <header>
-    <img src="assets/profile.jpg" alt="Chaymae Bennouri" class="profile-pic"/>
-    <h1>Chaymae Bennouri</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-      <a href="#highlights">Highlights</a>
-    </nav>
-    <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Toggle Dark Mode</button>
-
+    <div class="container">
+        <img src="assets/moi.jpeg" alt="Chaymae Bennouri" class="profile-pic"/>
+        <h1>Chaymae Bennouri</h1>
+        <h2>Scientific Consultant – R&D at Leyton</h2>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+          <a href="#highlights">Highlights</a>
+        </nav>
+        <button onclick="toggleDarkMode()" class="dark-toggle">🌙 Toggle Dark Mode</button>
+    </div>
   </header>
 
   <section id="about">
@@ -79,8 +81,12 @@
   </section>
 
   <footer>
-    <p>© 2025 Chaymae Bennouri</p>
+    <div class="container">
+      <p>Thank you for visiting my portfolio! Feel free to reach out if you have any questions or opportunities.</p>
+        <p>© 2025 Chaymae Bennouri</p>
+    </div>
   </footer>
+
     <script>
       function toggleDarkMode() {
         document.body.classList.toggle('dark-mode');

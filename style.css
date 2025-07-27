@@ -5,7 +5,40 @@
   --text: #3e2723;
   --accent: #a1887f;
   --white: #ffffff;
+  --dark-brown: #4e342e;
+
 }
+
+/* Dark mode styles */
+.dark-toggle {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+body.dark-mode {
+  background-color: #2e2e2e;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #ffe082;
+}
+
+body.dark-mode .dark-toggle {
+  background-color: #4e342e;
+}
+
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,6 +54,14 @@ header {
   padding: 1.5rem 0;
   text-align: center;
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
 
 header h1 {
   margin: 0;
@@ -43,10 +84,11 @@ nav a:hover {
 }
 
 section {
-  padding: 2rem;
-  max-width: 800px;
+  padding: 2rem 4rem;
+  max-width: 1100px;
   margin: auto;
   border-bottom: 1px solid var(--accent);
+  box-sizing: border-box;
 }
 
 h2 {
@@ -89,6 +131,10 @@ li {
   object-fit: cover;
   border: 3px solid var(--accent);
 }
+.profile-pic:hover {
+  border-color: var(--brown);
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   nav a {
@@ -106,41 +152,19 @@ li {
   }
 
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 1.3rem;
-  }
+    font-size: 1.8rem;
 }
-.dark-toggle {
-  background-color: var(--accent);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 1rem;
+    h3{
+         font-size: 1.3rem;
+        color: var(--accent);
+    }
 }
-
-body.dark-mode {
-  background-color: #2e2e2e;
-  color: #eee;
-}
-
-body.dark-mode header,
-body.dark-mode footer {
-  background-color: #1e1e1e;
-}
-
-body.dark-mode a {
-  color: #ffe082;
-}
-
-body.dark-mode .dark-toggle {
-  background-color: #4e342e;
-}
-
-footer p {
-  margin: 0;
-}
+  footer {
+        font-size: 0.8rem;
+    }
