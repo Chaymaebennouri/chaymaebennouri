@@ -1,0 +1,82 @@
+/* Light yellow and brown color scheme */
+:root {
+  --light-yellow: #fff8e1;
+  --brown: #6d4c41;
+  --text: #3e2723;
+  --accent: #a1887f;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-yellow);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--brown);
+  color: var(--white);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  border-bottom: 1px solid var(--accent);
+}
+
+h2 {
+  color: var(--brown);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--accent);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
