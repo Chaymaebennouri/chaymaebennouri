@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research | Chaymae Bennouri</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <!-- NAV: copy your existing nav from index.html for consistent styling -->
+  <header>
+    <nav class="navbar">
+      <a class="logo" href="index.html">Chaymae Bennouri</a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a class="active" href="research.html">Research</a></li>
+        <li><a href="index.html#resume">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-hero">
+      <h1>Research</h1>
+      <p class="subtitle">
+        My research interests sit at the intersection of applied machine learning, collective intelligence, and robust decision-making under real-world constraints.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Research Interests</h2>
+      <ul class="bullets">
+        <li>Collective intelligence and human–AI collaboration</li>
+        <li>Ensemble learning and robustness under data imbalance / drift</li>
+        <li>Reliable evaluation: error analysis, reproducibility, and model uncertainty</li>
+        <li>AI risk mitigation and trustworthy deployment in constrained environments</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Academic Writing</h2>
+
+      <div class="research-item">
+        <h3>Master’s Thesis</h3>
+        <p class="meta">MSc — Collective Intelligence</p>
+        <p>
+          <strong>Topic:</strong> Enhancing industrial image classification using ensemble learning and collective intelligence.
+        </p>
+        <p>
+          <strong>Abstract (short):</strong> Add 5–8 lines here summarising your research problem, approach, and key findings.
+        </p>
+        <p class="links">
+          <a href="assets/Thesis.pdf" target="_blank" rel="noopener">PDF</a>
+          <span class="sep">•</span>
+          <a href="#thesis-details">Methods & evaluation</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="card" id="research-projects">
+      <h2>Research Projects (selected)</h2>
+
+      <!-- Project template -->
+      <article class="research-item">
+        <h3>Industrial Image Classification under Class Imbalance (Ensemble Learning)</h3>
+        <p class="meta">Context: Nokia internship — industrial ML</p>
+
+        <p><strong>Problem.</strong> Describe the technical gap (e.g., accuracy degradation under imbalance / rare classes / noisy labels).</p>
+        <p><strong>Research question.</strong> Example: “Which ensemble strategies improve minority-class recall without sacrificing overall stability?”</p>
+        <p><strong>Methodology.</strong> Models compared (e.g., RF/XGBoost/stacking), sampling strategies, calibration, cross-validation design.</p>
+        <p><strong>Evaluation.</strong> Metrics (macro-F1, per-class recall, confusion matrix), baselines, robustness checks.</p>
+        <p><strong>Findings.</strong> What worked, what didn’t, and why (error analysis).</p>
+        <p><strong>Limitations.</strong> Data constraints, labeling uncertainty, distribution drift, compute limitations.</p>
+        <p><strong>Future work.</strong> Ideas that could become publishable (domain adaptation, uncertainty estimation, active learning).</p>
+
+        <p class="links">
+          <a href="index.html#projects">Code / demo</a>
+        </p>
+      </article>
+
+      <article class="research-item">
+        <h3>Collective Intelligence Platform: Feedback Loops for Matching & Profiling</h3>
+        <p class="meta">Context: academic project</p>
+
+        <p><strong>Problem.</strong> Define the technical uncertainty: feedback loops can amplify bias and destabilise ranking.</p>
+        <p><strong>Research question.</strong> “How can we design a feedback mechanism that improves relevance while preventing runaway reinforcement?”</p>
+        <p><strong>Methodology.</strong> Explain the modelling choice (implicit feedback signals, weighting, regularisation, A/B testing plan).</p>
+        <p><strong>Evaluation.</strong> Offline metrics + online proxies, sensitivity analysis, bias checks.</p>
+        <p><strong>Limitations.</strong> Confounding factors, sparse feedback, cold-start.</p>
+        <p><strong>Future work.</strong> Counterfactual evaluation, fairness constraints, causal inference.</p>
+
+        <p class="links">
+          <a href="index.html#projects">Code / demo</a>
+        </p>
+      </article>
+
+      <article class="research-item">
+        <h3>Water Connectivity & Field Data (Quantitative Study)</h3>
+        <p class="meta">Context: field data + statistical analysis</p>
+
+        <p><strong>Problem.</strong> Measuring intervention impact with noisy observational constraints.</p>
+        <p><strong>Research question.</strong> “Can we detect statistically meaningful changes in access/quality outcomes given sampling limitations?”</p>
+        <p><strong>Methodology.</strong> Study design, power analysis rationale, statistical tests/model selection.</p>
+        <p><strong>Evaluation.</strong> Validity threats, sensitivity checks.</p>
+        <p><strong>Future work.</strong> Stronger causal designs, longitudinal modelling, Bayesian approaches.</p>
+      </article>
+    </section>
+
+    <section class="card" id="thesis-details">
+      <h2>Methods & Evaluation (Thesis)</h2>
+      <p>
+        Add a compact, academic-style description of:
+        dataset, preprocessing, experimental design, baselines, ablations, error analysis, and reproducibility.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
