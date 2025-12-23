@@ -230,12 +230,6 @@ footer{
   border-top: 1px solid var(--border);
 }
 
-body.light-mode body{
-  background:
-    radial-gradient(1200px 600px at 20% 0%, rgba(37,99,235,0.08), transparent 55%),
-    radial-gradient(900px 500px at 80% 10%, rgba(59,130,246,0.06), transparent 60%),
-    #f6f7fb;
-}
 
 /* Responsive */
 @media (max-width: 768px){
