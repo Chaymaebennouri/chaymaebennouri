@@ -20,8 +20,6 @@ Features
 
 Responsive design for mobile and desktop
 
-Light yellow and brown color scheme for a warm professional feel
-
 Dark mode toggle for user preference
 
 PDF resume and project report downloads
