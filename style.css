@@ -21,19 +21,43 @@
 }
 
 /* Optional Light Mode */
-body.light-mode{
-  --bg: #f6f7fb;
-  --surface: #ffffff;
-  --surface-2: #f1f5f9;
-  --border: rgba(15,23,42,0.12);
 
-  --text: #0f172a;
-  --muted: rgba(15,23,42,0.70);
+/* ================================
+   Light mode header + nav fix
+   ================================ */
 
-  --header: #0f172a;
-  --link: #2563eb;
+body.light-mode header {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f1f5f9 100%
+  );
+  border-bottom: 1px solid rgba(15,23,42,0.12);
+}
 
-  --shadow: 0 10px 26px rgba(2,6,23,0.12);
+/* Header text */
+body.light-mode header h1 {
+  color: #0f172a;
+}
+
+body.light-mode header h2 {
+  color: rgba(15,23,42,0.7);
+}
+
+/* Nav links */
+body.light-mode nav a {
+  color: #0f172a;
+  opacity: 0.9;
+}
+
+body.light-mode nav a:hover {
+  opacity: 1;
+  text-decoration-color: #2563eb;
+}
+
+/* Active nav link */
+body.light-mode nav a.active {
+  color: #2563eb;
 }
 
 /* Base */
@@ -176,6 +200,11 @@ li{
   background-color: rgba(96,165,250,0.95);
 }
 
+body.light-mode .dark-toggle{
+  background: #2563eb;
+  color: #ffffff;
+}
+
 /* “Card” blocks (used on research page if you want) */
 .card{
   margin: 18px 0;
@@ -199,6 +228,13 @@ footer{
   padding: 1rem 0;
   font-size: 0.9rem;
   border-top: 1px solid var(--border);
+}
+
+body.light-mode body{
+  background:
+    radial-gradient(1200px 600px at 20% 0%, rgba(37,99,235,0.08), transparent 55%),
+    radial-gradient(900px 500px at 80% 10%, rgba(59,130,246,0.06), transparent 60%),
+    #f6f7fb;
 }
 
 /* Responsive */
