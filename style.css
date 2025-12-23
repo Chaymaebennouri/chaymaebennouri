@@ -1,80 +1,84 @@
-/* ================================
-   Global Dark-First Theme (Blue/Grey)
-   ================================ */
+/* =========================================================
+   Chaymae Bennouri — Global Theme (Dark default, Blue/Grey)
+   Works for: index.html, research.html, contact.html
+   Light mode is optional via: body.light-mode
+   ========================================================= */
 
+/* ---------- Theme tokens (Dark default) ---------- */
 :root{
   --bg: #0b1220;
+  --bg-grad-1: rgba(59,130,246,0.15);
+  --bg-grad-2: rgba(96,165,250,0.12);
+
   --surface: #0f1b2d;
   --surface-2: #12243a;
+
   --border: rgba(148, 163, 184, 0.18);
+  --shadow: 0 10px 30px rgba(0,0,0,0.25);
+  --radius: 16px;
 
   --text: #e5e7eb;
   --muted: rgba(229,231,235,0.75);
 
   --accent: #3b82f6;
   --accent-2: #60a5fa;
+
   --link: #93c5fd;
 
-  --header: #0a1628;
-  --shadow: 0 10px 30px rgba(0,0,0,0.25);
-  --radius: 16px;
+  --header-bg-1: rgba(15,27,45,0.95);
+  --header-bg-2: rgba(10,22,40,0.95);
+
+  --btn-bg: rgba(59,130,246,0.9);
+  --btn-bg-hover: rgba(96,165,250,0.95);
+  --btn-text: #ffffff;
 }
 
-/* Optional Light Mode */
+/* ---------- Light mode overrides (IMPORTANT) ---------- */
+body.light-mode{
+  --bg: #f6f7fb;
+  --bg-grad-1: rgba(37,99,235,0.08);
+  --bg-grad-2: rgba(59,130,246,0.06);
 
-/* ================================
-   Light mode header + nav fix
-   ================================ */
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
 
-body.light-mode header {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #f1f5f9 100%
-  );
-  border-bottom: 1px solid rgba(15,23,42,0.12);
+  --border: rgba(15,23,42,0.12);
+  --shadow: 0 10px 26px rgba(2,6,23,0.12);
+
+  --text: #0f172a;
+  --muted: rgba(15,23,42,0.70);
+
+  --accent: #2563eb;
+  --accent-2: #3b82f6;
+
+  --link: #2563eb;
+
+  --header-bg-1: #ffffff;
+  --header-bg-2: #f1f5f9;
+
+  --btn-bg: #2563eb;
+  --btn-bg-hover: #1d4ed8;
+  --btn-text: #ffffff;
 }
 
-/* Header text */
-body.light-mode header h1 {
-  color: #0f172a;
-}
-
-body.light-mode header h2 {
-  color: rgba(15,23,42,0.7);
-}
-
-/* Nav links */
-body.light-mode nav a {
-  color: #0f172a;
-  opacity: 0.9;
-}
-
-body.light-mode nav a:hover {
-  opacity: 1;
-  text-decoration-color: #2563eb;
-}
-
-/* Active nav link */
-body.light-mode nav a.active {
-  color: #2563eb;
-}
-
-/* Base */
+/* ---------- Reset / base ---------- */
 *{ box-sizing: border-box; }
 
+html, body{ height: 100%; }
+
 body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background:
-    radial-gradient(1200px 600px at 20% 0%, rgba(59,130,246,0.15), transparent 55%),
-    radial-gradient(900px 500px at 80% 10%, rgba(96,165,250,0.12), transparent 60%),
-    var(--bg);
-  color: var(--text);
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 20% 0%, var(--bg-grad-1), transparent 55%),
+    radial-gradient(900px 500px at 80% 10%, var(--bg-grad-2), transparent 60%),
+    var(--bg);
 }
 
+/* Links */
 a{
   color: var(--link);
   text-decoration: none;
@@ -84,25 +88,26 @@ a:hover{
   text-underline-offset: 6px;
 }
 
-/* Layout helpers */
+/* ---------- Layout ---------- */
 .container{
   max-width: 980px;
   margin: 0 auto;
   padding: 24px;
 }
 
-/* Header / Nav */
+/* ---------- Header / Nav ---------- */
 header{
-  background: linear-gradient(180deg, rgba(15,27,45,0.95), rgba(10,22,40,0.95));
-  border-bottom: 1px solid var(--border);
   text-align: center;
   padding: 1.5rem 0;
+  background: linear-gradient(180deg, var(--header-bg-1), var(--header-bg-2));
+  border-bottom: 1px solid var(--border);
 }
 
 header h1{
   margin: 12px 0 2px;
   font-size: 2.2rem;
   letter-spacing: 0.2px;
+  color: var(--text);
 }
 
 header h2{
@@ -114,28 +119,28 @@ header h2{
   padding: 0;
 }
 
+/* Nav */
 nav{
   margin-top: 1rem;
 }
 
 nav a{
   display: inline-block;
-  color: var(--text);
   margin: 0 1rem;
   font-weight: 700;
+  color: var(--text);
   opacity: 0.92;
 }
 
-nav a:hover{
-  opacity: 1;
-}
+nav a:hover{ opacity: 1; }
 
 nav a.active{
+  color: var(--accent-2);
   text-decoration: underline;
   text-underline-offset: 8px;
 }
 
-/* Sections */
+/* ---------- Sections ---------- */
 section{
   padding: 2rem 4rem;
   max-width: 1100px;
@@ -149,15 +154,20 @@ section:last-of-type{
 
 /* Headings */
 h2{
+  margin-top: 0;
   color: var(--text);
   border-bottom: 2px solid rgba(59,130,246,0.35);
   padding-bottom: 0.5rem;
-  margin-top: 0;
+}
+
+/* Better underline in light mode */
+body.light-mode h2{
+  border-bottom-color: rgba(37,99,235,0.35);
 }
 
 h3{
-  color: rgba(96,165,250,0.95);
   margin-bottom: 0.3rem;
+  color: var(--accent-2);
 }
 
 /* Lists */
@@ -165,11 +175,10 @@ ul{
   list-style-type: disc;
   padding-left: 1.5rem;
 }
-li{
-  margin-bottom: 0.75rem;
-}
 
-/* Profile picture */
+li{ margin-bottom: 0.75rem; }
+
+/* ---------- Profile image ---------- */
 .profile-pic{
   width: 130px;
   height: 130px;
@@ -180,32 +189,36 @@ li{
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
+body.light-mode .profile-pic{
+  box-shadow: 0 12px 24px rgba(2,6,23,0.18);
+}
+
 .profile-pic:hover{
   border-color: rgba(96,165,250,0.9);
 }
 
-/* Button */
+body.light-mode .profile-pic:hover{
+  border-color: rgba(37,99,235,0.75);
+}
+
+/* ---------- Buttons ---------- */
 .dark-toggle{
-  background-color: rgba(59,130,246,0.9);
-  color: #fff;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   border: none;
   padding: 0.55rem 1.05rem;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 1rem;
   font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.20);
 }
 
 .dark-toggle:hover{
-  background-color: rgba(96,165,250,0.95);
+  background-color: var(--btn-bg-hover);
 }
 
-body.light-mode .dark-toggle{
-  background: #2563eb;
-  color: #ffffff;
-}
-
-/* “Card” blocks (used on research page if you want) */
+/* ---------- Cards (optional, for research.html blocks) ---------- */
 .card{
   margin: 18px 0;
   padding: 18px;
@@ -220,18 +233,17 @@ body.light-mode .card{
   background: rgba(255,255,255,0.92);
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 footer{
-  background-color: var(--header);
-  color: var(--muted);
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
+  background: linear-gradient(180deg, var(--header-bg-1), var(--header-bg-2));
+  color: var(--muted);
   border-top: 1px solid var(--border);
 }
 
-
-/* Responsive */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px){
   nav a{
     display: block;
@@ -252,11 +264,6 @@ footer{
     line-height: 1.25;
   }
 
-  h2{
-    font-size: 1.5rem;
-  }
-
-  h3{
-    font-size: 1.15rem;
-  }
+  h2{ font-size: 1.5rem; }
+  h3{ font-size: 1.15rem; }
 }
