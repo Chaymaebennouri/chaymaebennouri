@@ -1,94 +1,108 @@
-/* ================================
-   Chaymae Portfolio UI (Dark-First)
-   Blue/Grey + Accessible Light Mode
-   ================================ */
+/* =========================================
+   Smooth UI Theme (Dark-first)
+   - Softer slate/indigo palette
+   - More flexible spacing + typography
+   - Better readability in light mode
+   ========================================= */
 
-/* 1) Theme tokens */
+/* ---------- Tokens ---------- */
 :root{
-  /* Dark */
-  --bg: #0b1220;
-  --bg-grad-1: rgba(59,130,246,0.16);
-  --bg-grad-2: rgba(96,165,250,0.12);
+  /* Layout */
+  --max: 1040px;
+  --radius: 18px;
+  --radius-sm: 12px;
 
-  --surface: rgba(15, 27, 45, 0.72);
-  --surface-solid: #0f1b2d;
-  --surface-2: #12243a;
+  --space-1: 10px;
+  --space-2: 14px;
+  --space-3: 18px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  /* Typography */
+  --body: 16px;
+  --line: 1.7;
+  --h1: clamp(1.75rem, 3vw, 2.5rem);
+  --h2: clamp(1.25rem, 2.2vw, 1.7rem);
+  --h3: clamp(1.05rem, 2vw, 1.25rem);
+
+  /* Dark palette (smooth) */
+  --bg: #0b1220;
+  --bg-2: #0a1628;
+
+  --grad-1: rgba(99, 102, 241, 0.14);   /* indigo */
+  --grad-2: rgba(56, 189, 248, 0.09);   /* sky */
+
+  --surface: rgba(15, 23, 42, 0.62);    /* slate */
+  --surface-2: rgba(30, 41, 59, 0.55);
+  --surface-solid: #0f172a;
 
   --border: rgba(148, 163, 184, 0.18);
   --border-strong: rgba(148, 163, 184, 0.28);
 
   --text: #e5e7eb;
-  --muted: rgba(229,231,235,0.75);
+  --muted: rgba(226, 232, 240, 0.72);
 
-  --accent: #3b82f6;
-  --accent-2: #60a5fa;
-  --link: #93c5fd;
+  --accent: #818cf8;     /* soft indigo */
+  --accent-2: #38bdf8;   /* soft sky */
+  --link: #a5b4fc;
 
-  --header: rgba(10, 22, 40, 0.78);
-  --shadow: 0 10px 30px rgba(0,0,0,0.28);
-  --radius: 16px;
+  --shadow: 0 14px 36px rgba(0,0,0,0.30);
+  --shadow-soft: 0 10px 24px rgba(0,0,0,0.22);
 
-  --max: 980px;
-
-  --focus: rgba(59,130,246,0.55);
+  --focus: rgba(129, 140, 248, 0.40);
   --ring: 0 0 0 4px var(--focus);
-
-  --h1: clamp(1.7rem, 2.8vw, 2.4rem);
-  --h2: clamp(1.25rem, 2.2vw, 1.6rem);
-  --h3: clamp(1.05rem, 2vw, 1.25rem);
-
-  --body: 16px;
-  --line: 1.65;
 }
 
 /* Light mode overrides */
 body.light{
   --bg: #f8fafc;
-  --bg-grad-1: rgba(37, 99, 235, 0.10);
-  --bg-grad-2: rgba(2, 132, 199, 0.08);
+  --bg-2: #ffffff;
+
+  --grad-1: rgba(99, 102, 241, 0.08);
+  --grad-2: rgba(56, 189, 248, 0.06);
 
   --surface: rgba(255,255,255,0.92);
+  --surface-2: rgba(241,245,249,0.92);
   --surface-solid: #ffffff;
-  --surface-2: #f1f5f9;
 
-  --border: rgba(15, 23, 42, 0.14);
-  --border-strong: rgba(15, 23, 42, 0.20);
+  --border: rgba(15, 23, 42, 0.12);
+  --border-strong: rgba(15, 23, 42, 0.18);
 
   --text: #0f172a;
-  --muted: rgba(15,23,42,0.70);
+  --muted: rgba(15, 23, 42, 0.70);
 
-  --accent: #2563eb;
-  --accent-2: #1d4ed8;
-  --link: #1d4ed8;
+  --accent: #4f46e5;
+  --accent-2: #0284c7;
+  --link: #4f46e5;
 
-  --header: rgba(255,255,255,0.82);
-  --shadow: 0 12px 32px rgba(2, 6, 23, 0.10);
+  --shadow: 0 16px 36px rgba(2, 6, 23, 0.10);
+  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.08);
 
-  --focus: rgba(37,99,235,0.35);
+  --focus: rgba(79, 70, 229, 0.30);
 }
 
-/* 2) Base reset */
+/* ---------- Base ---------- */
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
-body{
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  font-size: var(--body);
-  line-height: var(--line);
-  color: var(--text);
-  background:
-    radial-gradient(1200px 600px at 20% 0%, var(--bg-grad-1), transparent 55%),
-    radial-gradient(900px 500px at 80% 10%, var(--bg-grad-2), transparent 60%),
-    var(--bg);
-}
 
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   *{ transition: none !important; animation: none !important; }
 }
 
-/* 3) Links + focus */
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: var(--body);
+  line-height: var(--line);
+  color: var(--text);
+  background:
+    radial-gradient(1100px 600px at 15% 0%, var(--grad-1), transparent 55%),
+    radial-gradient(900px 520px at 85% 10%, var(--grad-2), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+/* ---------- Links / Focus ---------- */
 a{
   color: var(--link);
   text-decoration: none;
@@ -97,28 +111,30 @@ a:hover{
   text-decoration: underline;
   text-underline-offset: 6px;
 }
-a:focus-visible,
-button:focus-visible{
+a:focus-visible, button:focus-visible{
   outline: none;
   box-shadow: var(--ring);
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* 4) Layout */
+/* ---------- Layout ---------- */
 .container{
   max-width: var(--max);
   margin: 0 auto;
-  padding: 24px;
+  padding: var(--space-4);
 }
 
-/* 5) Header / Nav (sticky glass) */
+/* ---------- Header (sticky, flexible) ---------- */
 header{
   position: sticky;
   top: 0;
   z-index: 50;
+  background: rgba(2,6,23,0.45);
   backdrop-filter: blur(10px);
-  background: var(--header);
   border-bottom: 1px solid var(--border);
+}
+body.light header{
+  background: rgba(255,255,255,0.72);
 }
 
 header .container{
@@ -127,18 +143,19 @@ header .container{
   padding-bottom: 18px;
 }
 
+/* Profile image */
 .profile-pic{
-  width: 118px;
-  height: 118px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid rgba(59,130,246,0.55);
-  box-shadow: var(--shadow);
-  transition: transform 200ms ease, border-color 200ms ease;
+  border: 3px solid rgba(129,140,248,0.55);
+  box-shadow: var(--shadow-soft);
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 .profile-pic:hover{
-  transform: translateY(-1px) scale(1.01);
-  border-color: rgba(96,165,250,0.9);
+  transform: translateY(-1px);
+  border-color: rgba(56,189,248,0.80);
 }
 
 header h1{
@@ -151,55 +168,47 @@ header h2{
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--muted);
-  border: none;
-  padding: 0;
 }
 
-/* Nav */
+/* Nav - more flexible */
 nav{
   margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px;
 }
-
 nav a{
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid transparent;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 750;
   opacity: 0.92;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
-
 nav a:hover{
   opacity: 1;
   background: rgba(148,163,184,0.10);
   border-color: var(--border);
   text-decoration: none;
+  transform: translateY(-1px);
 }
-
 nav a.active{
-  background: rgba(59,130,246,0.18);
-  border-color: rgba(59,130,246,0.35);
   opacity: 1;
+  background: rgba(129,140,248,0.16);
+  border-color: rgba(129,140,248,0.32);
 }
 
-/* 6) Theme toggle button */
+/* Toggle button */
 .dark-toggle{
   margin-top: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(59,130,246,0.35);
-  background: rgba(59,130,246,0.16);
+  border-radius: 14px;
+  border: 1px solid rgba(129,140,248,0.35);
+  background: rgba(129,140,248,0.14);
   color: var(--text);
   cursor: pointer;
   font-weight: 800;
@@ -207,54 +216,49 @@ nav a.active{
 }
 .dark-toggle:hover{
   transform: translateY(-1px);
-  background: rgba(59,130,246,0.22);
-  border-color: rgba(59,130,246,0.55);
+  background: rgba(129,140,248,0.20);
+  border-color: rgba(56,189,248,0.45);
 }
 
-/* 7) Main page hero */
+/* ---------- Page hero ---------- */
 .page-hero{
-  margin: 18px 0 14px;
-  padding: 14px 16px;
+  margin: var(--space-3) 0 var(--space-2);
+  padding: var(--space-3);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: rgba(148,163,184,0.06);
 }
 
 .page-hero h1{
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-size: var(--h1);
 }
-
 .subtitle{
   margin: 0;
   color: var(--muted);
 }
 
-/* 8) Sections / Cards */
-section{
-  margin: 22px 0;
-}
+/* ---------- Sections / Headings ---------- */
+section{ margin: var(--space-4) 0; }
 
 h2{
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: var(--h2);
-  color: var(--text);
-  padding-bottom: 8px;
-  border-bottom: 2px solid rgba(59,130,246,0.28);
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(129,140,248,0.22);
 }
-
 h3{
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-size: var(--h3);
-  color: rgba(96,165,250,0.95);
+  color: rgba(165,180,252,0.95);
 }
-
 body.light h3{
-  color: rgba(29,78,216,0.92);
+  color: rgba(79,70,229,0.92);
 }
 
+/* ---------- Cards (flexible, smoother) ---------- */
 .card{
-  padding: 18px;
+  padding: var(--space-4);
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
@@ -264,26 +268,29 @@ body.light h3{
 
 .meta{
   margin-top: -6px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: var(--muted);
-  font-size: 0.95em;
+  font-size: 0.96em;
+}
+
+.card p{
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 ul{
-  padding-left: 1.15rem;
   margin: 10px 0 0;
+  padding-left: 1.15rem;
 }
-li{ margin: 0 0 10px; }
+li{ margin-bottom: 10px; }
 
-.links{
-  margin-top: 12px;
-  color: var(--muted);
-}
+/* Links row */
+.links{ margin-top: 12px; color: var(--muted); }
 .sep{ margin: 0 8px; opacity: 0.6; }
 
-/* 9) Footer */
+/* ---------- Footer ---------- */
 footer{
-  margin-top: 26px;
+  margin-top: var(--space-5);
   border-top: 1px solid var(--border);
   background: rgba(148,163,184,0.06);
 }
@@ -295,7 +302,7 @@ footer .container{
   font-size: 0.95rem;
 }
 
-/* 10) Back-to-top button */
+/* ---------- Back to top (if your JS adds it) ---------- */
 #backToTop{
   position: fixed;
   right: 16px;
@@ -304,32 +311,33 @@ footer .container{
   opacity: 0;
   pointer-events: none;
   transform: translateY(8px);
-  transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
-
 #backToTop.show{
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-
 #backToTop button{
   padding: 10px 12px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   background: var(--surface-solid);
   color: var(--text);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
   cursor: pointer;
   font-weight: 800;
 }
 
-/* 11) Responsive */
-@media (max-width: 768px){
-  header .container{ padding-top: 16px; padding-bottom: 16px; }
-  .profile-pic{ width: 98px; height: 98px; }
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .container{ padding: 18px; }
+  .card{ padding: 18px; }
+  .page-hero{ padding: 18px; }
+}
+
+@media (max-width: 540px){
+  .profile-pic{ width: 96px; height: 96px; }
   nav{ gap: 8px; }
   nav a{ padding: 8px 10px; }
-  .container{ padding: 18px; }
-  .card{ padding: 16px; }
 }
