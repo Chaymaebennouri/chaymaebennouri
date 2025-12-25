@@ -1,76 +1,80 @@
-/* =========================================================
-   Chaymae Bennouri — Global Theme (Dark default, Blue/Grey)
-   Works for: index.html, research.html, contact.html
-   Light mode is optional via: body.light-mode
-   ========================================================= */
+/* ================================
+   Chaymae Portfolio UI (Dark-First)
+   Blue/Grey + Accessible Light Mode
+   ================================ */
 
-/* ---------- Theme tokens (Dark default) ---------- */
+/* 1) Theme tokens */
 :root{
+  /* Dark */
   --bg: #0b1220;
-  --bg-grad-1: rgba(59,130,246,0.15);
+  --bg-grad-1: rgba(59,130,246,0.16);
   --bg-grad-2: rgba(96,165,250,0.12);
 
-  --surface: #0f1b2d;
+  --surface: rgba(15, 27, 45, 0.72);
+  --surface-solid: #0f1b2d;
   --surface-2: #12243a;
 
   --border: rgba(148, 163, 184, 0.18);
-  --shadow: 0 10px 30px rgba(0,0,0,0.25);
-  --radius: 16px;
+  --border-strong: rgba(148, 163, 184, 0.28);
 
   --text: #e5e7eb;
   --muted: rgba(229,231,235,0.75);
 
   --accent: #3b82f6;
   --accent-2: #60a5fa;
-
   --link: #93c5fd;
 
-  --header-bg-1: rgba(15,27,45,0.95);
-  --header-bg-2: rgba(10,22,40,0.95);
+  --header: rgba(10, 22, 40, 0.78);
+  --shadow: 0 10px 30px rgba(0,0,0,0.28);
+  --radius: 16px;
 
-  --btn-bg: rgba(59,130,246,0.9);
-  --btn-bg-hover: rgba(96,165,250,0.95);
-  --btn-text: #ffffff;
+  --max: 980px;
+
+  --focus: rgba(59,130,246,0.55);
+  --ring: 0 0 0 4px var(--focus);
+
+  --h1: clamp(1.7rem, 2.8vw, 2.4rem);
+  --h2: clamp(1.25rem, 2.2vw, 1.6rem);
+  --h3: clamp(1.05rem, 2vw, 1.25rem);
+
+  --body: 16px;
+  --line: 1.65;
 }
 
-/* ---------- Light mode overrides (IMPORTANT) ---------- */
-body.light-mode{
-  --bg: #f6f7fb;
-  --bg-grad-1: rgba(37,99,235,0.08);
-  --bg-grad-2: rgba(59,130,246,0.06);
+/* Light mode overrides */
+body.light{
+  --bg: #f8fafc;
+  --bg-grad-1: rgba(37, 99, 235, 0.10);
+  --bg-grad-2: rgba(2, 132, 199, 0.08);
 
-  --surface: #ffffff;
+  --surface: rgba(255,255,255,0.92);
+  --surface-solid: #ffffff;
   --surface-2: #f1f5f9;
 
-  --border: rgba(15,23,42,0.12);
-  --shadow: 0 10px 26px rgba(2,6,23,0.12);
+  --border: rgba(15, 23, 42, 0.14);
+  --border-strong: rgba(15, 23, 42, 0.20);
 
   --text: #0f172a;
   --muted: rgba(15,23,42,0.70);
 
   --accent: #2563eb;
-  --accent-2: #3b82f6;
+  --accent-2: #1d4ed8;
+  --link: #1d4ed8;
 
-  --link: #2563eb;
+  --header: rgba(255,255,255,0.82);
+  --shadow: 0 12px 32px rgba(2, 6, 23, 0.10);
 
-  --header-bg-1: #ffffff;
-  --header-bg-2: #f1f5f9;
-
-  --btn-bg: #2563eb;
-  --btn-bg-hover: #1d4ed8;
-  --btn-text: #ffffff;
+  --focus: rgba(37,99,235,0.35);
 }
 
-/* ---------- Reset / base ---------- */
+/* 2) Base reset */
 *{ box-sizing: border-box; }
-
-html, body{ height: 100%; }
-
+html{ scroll-behavior: smooth; }
 body{
   margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-size: var(--body);
+  line-height: var(--line);
   color: var(--text);
   background:
     radial-gradient(1200px 600px at 20% 0%, var(--bg-grad-1), transparent 55%),
@@ -78,7 +82,13 @@ body{
     var(--bg);
 }
 
-/* Links */
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ transition: none !important; animation: none !important; }
+}
+
+/* 3) Links + focus */
 a{
   color: var(--link);
   text-decoration: none;
@@ -87,29 +97,55 @@ a:hover{
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+a:focus-visible,
+button:focus-visible{
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: 10px;
+}
 
-/* ---------- Layout ---------- */
+/* 4) Layout */
 .container{
-  max-width: 980px;
+  max-width: var(--max);
   margin: 0 auto;
   padding: 24px;
 }
 
-/* ---------- Header / Nav ---------- */
+/* 5) Header / Nav (sticky glass) */
 header{
-  text-align: center;
-  padding: 1.5rem 0;
-  background: linear-gradient(180deg, var(--header-bg-1), var(--header-bg-2));
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: var(--header);
   border-bottom: 1px solid var(--border);
 }
 
-header h1{
-  margin: 12px 0 2px;
-  font-size: 2.2rem;
-  letter-spacing: 0.2px;
-  color: var(--text);
+header .container{
+  text-align: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
+.profile-pic{
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(59,130,246,0.55);
+  box-shadow: var(--shadow);
+  transition: transform 200ms ease, border-color 200ms ease;
+}
+.profile-pic:hover{
+  transform: translateY(-1px) scale(1.01);
+  border-color: rgba(96,165,250,0.9);
+}
+
+header h1{
+  margin: 12px 0 4px;
+  font-size: var(--h1);
+  letter-spacing: 0.2px;
+}
 header h2{
   margin: 0;
   font-size: 1.05rem;
@@ -121,149 +157,179 @@ header h2{
 
 /* Nav */
 nav{
-  margin-top: 1rem;
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 nav a{
-  display: inline-block;
-  margin: 0 1rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
   color: var(--text);
+  font-weight: 700;
   opacity: 0.92;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-nav a:hover{ opacity: 1; }
+nav a:hover{
+  opacity: 1;
+  background: rgba(148,163,184,0.10);
+  border-color: var(--border);
+  text-decoration: none;
+}
 
 nav a.active{
-  color: var(--accent-2);
-  text-decoration: underline;
-  text-underline-offset: 8px;
+  background: rgba(59,130,246,0.18);
+  border-color: rgba(59,130,246,0.35);
+  opacity: 1;
 }
 
-/* ---------- Sections ---------- */
-section{
-  padding: 2rem 4rem;
-  max-width: 1100px;
-  margin: auto;
-  border-bottom: 1px solid var(--border);
-}
-
-section:last-of-type{
-  border-bottom: none;
-}
-
-/* Headings */
-h2{
-  margin-top: 0;
+/* 6) Theme toggle button */
+.dark-toggle{
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(59,130,246,0.35);
+  background: rgba(59,130,246,0.16);
   color: var(--text);
-  border-bottom: 2px solid rgba(59,130,246,0.35);
-  padding-bottom: 0.5rem;
+  cursor: pointer;
+  font-weight: 800;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+.dark-toggle:hover{
+  transform: translateY(-1px);
+  background: rgba(59,130,246,0.22);
+  border-color: rgba(59,130,246,0.55);
 }
 
-/* Better underline in light mode */
-body.light-mode h2{
-  border-bottom-color: rgba(37,99,235,0.35);
+/* 7) Main page hero */
+.page-hero{
+  margin: 18px 0 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(148,163,184,0.06);
+}
+
+.page-hero h1{
+  margin: 0 0 8px;
+  font-size: var(--h1);
+}
+
+.subtitle{
+  margin: 0;
+  color: var(--muted);
+}
+
+/* 8) Sections / Cards */
+section{
+  margin: 22px 0;
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: var(--h2);
+  color: var(--text);
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(59,130,246,0.28);
 }
 
 h3{
-  margin-bottom: 0.3rem;
-  color: var(--accent-2);
+  margin: 0 0 8px;
+  font-size: var(--h3);
+  color: rgba(96,165,250,0.95);
 }
 
-/* Lists */
-ul{
-  list-style-type: disc;
-  padding-left: 1.5rem;
+body.light h3{
+  color: rgba(29,78,216,0.92);
 }
 
-li{ margin-bottom: 0.75rem; }
-
-/* ---------- Profile image ---------- */
-.profile-pic{
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  margin-top: 1rem;
-  object-fit: cover;
-  border: 3px solid rgba(59,130,246,0.55);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-}
-
-body.light-mode .profile-pic{
-  box-shadow: 0 12px 24px rgba(2,6,23,0.18);
-}
-
-.profile-pic:hover{
-  border-color: rgba(96,165,250,0.9);
-}
-
-body.light-mode .profile-pic:hover{
-  border-color: rgba(37,99,235,0.75);
-}
-
-/* ---------- Buttons ---------- */
-.dark-toggle{
-  background-color: var(--btn-bg);
-  color: var(--btn-text);
-  border: none;
-  padding: 0.55rem 1.05rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 1rem;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.20);
-}
-
-.dark-toggle:hover{
-  background-color: var(--btn-bg-hover);
-}
-
-/* ---------- Cards (optional, for research.html blocks) ---------- */
 .card{
-  margin: 18px 0;
   padding: 18px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: rgba(15,27,45,0.72);
+  background: var(--surface);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
-body.light-mode .card{
-  background: rgba(255,255,255,0.92);
-}
-
-/* ---------- Footer ---------- */
-footer{
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  background: linear-gradient(180deg, var(--header-bg-1), var(--header-bg-2));
+.meta{
+  margin-top: -6px;
+  margin-bottom: 10px;
   color: var(--muted);
-  border-top: 1px solid var(--border);
+  font-size: 0.95em;
 }
 
-/* ---------- Responsive ---------- */
+ul{
+  padding-left: 1.15rem;
+  margin: 10px 0 0;
+}
+li{ margin: 0 0 10px; }
+
+.links{
+  margin-top: 12px;
+  color: var(--muted);
+}
+.sep{ margin: 0 8px; opacity: 0.6; }
+
+/* 9) Footer */
+footer{
+  margin-top: 26px;
+  border-top: 1px solid var(--border);
+  background: rgba(148,163,184,0.06);
+}
+footer .container{
+  padding-top: 18px;
+  padding-bottom: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* 10) Back-to-top button */
+#backToTop{
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+#backToTop.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#backToTop button{
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-solid);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+/* 11) Responsive */
 @media (max-width: 768px){
-  nav a{
-    display: block;
-    margin: 0.55rem 0;
-  }
-
-  section{
-    padding: 1.25rem;
-  }
-
-  .profile-pic{
-    width: 105px;
-    height: 105px;
-  }
-
-  header h1{
-    font-size: 1.9rem;
-    line-height: 1.25;
-  }
-
-  h2{ font-size: 1.5rem; }
-  h3{ font-size: 1.15rem; }
+  header .container{ padding-top: 16px; padding-bottom: 16px; }
+  .profile-pic{ width: 98px; height: 98px; }
+  nav{ gap: 8px; }
+  nav a{ padding: 8px 10px; }
+  .container{ padding: 18px; }
+  .card{ padding: 16px; }
 }
