@@ -495,7 +495,59 @@
   </p>
 </section>
 
+<section class="card">
+  <h3>Effects of Smoking, BMI, Age, and Their Interactions on Insurance Charges</h3>
+  <p class="meta">
+    Applied Statistics / Data Science Interaction Modelling Study
+  </p>
 
+  <p>
+    This study investigates how individual characteristics and their interactions
+    influence health insurance charges. Using a publicly available U.S. insurance
+    dataset, the research focuses on the joint effects of smoking behaviour, body
+    mass index (BMI), and age, with particular attention to interaction effects
+    that are not captured by additive models.
+  </p>
+
+  <ul>
+    <li><strong>Research questions:</strong>
+      <ul>
+        <li>Which variables have the strongest association with insurance charges?</li>
+        <li>Do interactions between smoking and BMI significantly affect insurance costs?</li>
+      </ul>
+    </li>
+    <li><strong>Dataset:</strong> Kaggle health insurance dataset (1,338 observations, 7 variables)</li>
+    <li><strong>Preprocessing:</strong> Variable recoding, centering (age, BMI), categorical encoding</li>
+    <li><strong>Methods:</strong> Multiple linear regression, polynomial regression, interaction terms</li>
+    <li><strong>Model selection:</strong> AIC-based comparison across competing models</li>
+  </ul>
+
+  <p>
+    Exploratory analysis revealed strong correlations between insurance charges and
+    smoking status, as well as notable interaction effects between smoking and BMI.
+    Regression results show that while BMI has a modest effect for non-smokers,
+    its impact increases substantially among smokers, indicating a multiplicative
+    rather than additive relationship.
+  </p>
+
+  <p>
+    Models incorporating interaction terms achieved lower AIC values than additive
+    models, supporting the inclusion of interaction effects. The final specification
+    highlights smoking status as the dominant predictor, with age and BMI contributing
+    additional explanatory power through interaction with smoking behaviour.
+  </p>
+
+  <p>
+    Limitations include the absence of key confounding variables such as income,
+    occupation risk, lifestyle factors, and chronic health conditions, preventing
+    causal attribution. The analysis therefore focuses on association rather than
+    causal inference.
+  </p>
+
+  <p class="links">
+    <a href="assets/Projects/Insurance_changes.pdf" target="_blank"> Project presentation (PDF) </a>
+  </p>
+</section>
 
   </main>
   <footer>
