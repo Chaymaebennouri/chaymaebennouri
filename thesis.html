@@ -3,119 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Master’s Thesis – Chaymae Bennouri</title>
-  <link rel="stylesheet" href="style.css" />
+<title>Research | Chaymae Bennouri</title>
+ <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-  <div class="container">
-    <h1>Master’s Thesis</h1>
-    <h2>School of Collective Intelligence – UM6P</h2>
+  <header>
+    <div class="navbar">
+        <img src="assets/moi.jpeg" alt="Chaymae Bennouri" class="profile-pic"/>
+        <h1>Chaymae Bennouri</h1>
+        <h2>R&D Consultant</h2>
+        <nav>
+          <a class="active" href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a class="active" href="research.html">Research</a>
+          <a class="active" href="experience.html">Projects</a>
+          <a class="active" href="thesis.html">Thesis</a>
+          <a class="active" href="resume.html">Resume</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+        <button id="themeToggle" class="dark-toggle" type="button">🌙 Toggle Dark Mode</button>
+    </div>
+  </header>
 
-    <nav>
-      <a class="active" href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
-      <a class="active" href="research.html">Research</a>
-      <a class="active" href="experience.html">Projects</a>
-      <a class="active" href="thesis.html">Thesis</a>
-      <a class="active" href="resume.html">Resume</a>
-      <a class="active" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main>  
+    <section>
+      <h2>Thesis Overview</h2>
 
-<section>
-  <h2>Thesis Overview</h2>
+      <p class="meta">
+        Master’s in Collective Intelligence · 2023–2024 · Industrial Research Thesis
+      </p>
 
-  <p class="meta">
-    Master’s in Collective Intelligence · 2023–2024 · Industrial Research Thesis
-  </p>
+      <p>
+        This thesis investigates how advanced deep learning architectures and ensemble learning
+        can improve the robustness and accuracy of industrial image classification systems.
+        The research was conducted as part of an industry-embedded internship at Nokia Morocco,
+        focusing on AI/ML digital deployment workflows.
+      </p>
+    </section>
 
-  <p>
-    This thesis investigates how advanced deep learning architectures and ensemble learning
-    can improve the robustness and accuracy of industrial image classification systems.
-    The research was conducted as part of an industry-embedded internship at Nokia Morocco,
-    focusing on AI/ML digital deployment workflows.
-  </p>
-</section>
+    <section>
+      <h2>Research Questions</h2>
+      <ul>
+        <li>
+          How can advanced CNN architectures be optimized to improve generalization
+          in industrial image classification tasks?
+        </li>
+        <li>
+          To what extent does ensemble learning mitigate overfitting and class imbalance
+          in real-world industrial datasets?
+        </li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Research Questions</h2>
-  <ul>
-    <li>
-      How can advanced CNN architectures be optimized to improve generalization
-      in industrial image classification tasks?
-    </li>
-    <li>
-      To what extent does ensemble learning mitigate overfitting and class imbalance
-      in real-world industrial datasets?
-    </li>
-  </ul>
-</section>
+    <section>
+      <h2>Methodology</h2>
+      <ul>
+        <li>Comparative evaluation of CNN architectures (NASNetLarge, InceptionV3, DenseNet, EfficientNet)</li>
+        <li>Two dataset structuring strategies to study cross-domain generalization</li>
+        <li>Data preprocessing and augmentation to reduce overfitting</li>
+        <li>Feature extraction using YOLOv5</li>
+        <li>Ensemble learning via prediction aggregation</li>
+        <li>Evaluation using accuracy, precision, recall, F1-score, and confusion matrices</li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Methodology</h2>
-  <ul>
-    <li>Comparative evaluation of CNN architectures (NASNetLarge, InceptionV3, DenseNet, EfficientNet)</li>
-    <li>Two dataset structuring strategies to study cross-domain generalization</li>
-    <li>Data preprocessing and augmentation to reduce overfitting</li>
-    <li>Feature extraction using YOLOv5</li>
-    <li>Ensemble learning via prediction aggregation</li>
-    <li>Evaluation using accuracy, precision, recall, F1-score, and confusion matrices</li>
-  </ul>
-</section>
+    <section>
+      <h2>Key Results</h2>
+      <ul>
+        <li>
+          Best individual model accuracy: <strong>62.37%</strong> (DenseNet169)
+        </li>
+        <li>
+          Ensemble model accuracy: <strong>69%</strong>, demonstrating improved generalization
+        </li>
+        <li>
+          Ensemble learning reduced variance and overfitting compared to single-model approaches
+        </li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Key Results</h2>
-  <ul>
-    <li>
-      Best individual model accuracy: <strong>62.37%</strong> (DenseNet169)
-    </li>
-    <li>
-      Ensemble model accuracy: <strong>69%</strong>, demonstrating improved generalization
-    </li>
-    <li>
-      Ensemble learning reduced variance and overfitting compared to single-model approaches
-    </li>
-  </ul>
-</section>
+    <section>
+      <h2>Limitations & Future Work</h2>
+      <ul>
+        <li>Significant class imbalance between “Pass” and “Fail” samples</li>
+        <li>Limited dataset size for certain checkpoints</li>
+        <li>High computational cost for large CNN architectures</li>
+        <li>
+          Future work includes cost-sensitive learning, improved resampling strategies,
+          and hybrid human-in-the-loop feature extraction
+        </li>
+      </ul>
+    </section>
 
-<section>
-  <h2>Limitations & Future Work</h2>
-  <ul>
-    <li>Significant class imbalance between “Pass” and “Fail” samples</li>
-    <li>Limited dataset size for certain checkpoints</li>
-    <li>High computational cost for large CNN architectures</li>
-    <li>
-      Future work includes cost-sensitive learning, improved resampling strategies,
-      and hybrid human-in-the-loop feature extraction
-    </li>
-  </ul>
-</section>
+    <section>
+      <h2>Supervision & Affiliation</h2>
+      <p>
+        <strong>Academic Supervisor:</strong> Prof. Mark Klein (UM6P)  
+        <br/>
+        <strong>Industry Supervisor:</strong> Oussama Ghandari (Nokia)
+      </p>
+    </section>
 
-<section>
-  <h2>Supervision & Affiliation</h2>
-  <p>
-    <strong>Academic Supervisor:</strong> Prof. Mark Klein (UM6P)  
-    <br/>
-    <strong>Industry Supervisor:</strong> Oussama Ghandari (Nokia)
-  </p>
-</section>
-
-<section>
-  <h2>Thesis Document</h2>
-  <p>
-    <a href="assets/thesischaymaebennouri.pdf" target="_blank"> Download Full Master’s Thesis (PDF)  </a>
-  </p>
-</section>
-
-<footer>
-  <div class="container">
-    <p>© 2025 Chaymae Bennouri</p>
-  </div>
-</footer>
+    <section>
+      <h2>Thesis Document</h2>
+      <p>
+        <a href="assets/thesischaymaebennouri.pdf" target="_blank"> Download Full Master’s Thesis (PDF)  </a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>Thank you for visiting my portfolio! Feel free to reach out if you have any questions or opportunities.</p>
+      <p>© 2025 Chaymae Bennouri</p>
+   </div>
+  </footer>
+  <script src="script.js"></script>
 
 </body>
 </html>
