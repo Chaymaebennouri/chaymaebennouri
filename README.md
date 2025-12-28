@@ -6,15 +6,19 @@ The website highlights my academic journey, professional experience, research pr
 
 Sections Included:
 
-About Me – Academic background, research interests, and career goals.
+Home: Describe my focus research.
 
-Projects – A showcase of my academic work, research contributions, and applied data science projects.
+About: Describe me and my career.
 
-Resume – Summary of my skills and experience, with a downloadable PDF CV.
+Research: A showcase of my academic work, research contributions, and applied data science projects.
+
+Thesis: Overview of my Master's thesis, research contributions, and Deploy Services of Network Infrastructure: AI/ML Digital Deploy 
+
+Thesis: A highlight of my experience in the professional world
+
+Resume – Summary of my skills and experience.
 
 Contact – How to reach me, including email, LinkedIn, and GitHub.
-
-Highlights – Certifications, awards, leadership roles, and volunteer activities.
 
 Features
 
