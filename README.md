@@ -16,9 +16,9 @@ Thesis: Overview of my Master's thesis, research contributions, and Deploy Servi
 
 Thesis: A highlight of my experience in the professional world
 
-Resume – Summary of my skills and experience.
+Resume: Summary of my skills and experience.
 
-Contact – How to reach me, including email, LinkedIn, and GitHub.
+Contact: How to reach me, including email, LinkedIn, and GitHub.
 
 Features
 
