@@ -1,35 +1,111 @@
-Chaymae Bennouri  Personal Portfolio Website
+# Chaymae Bennouri — Personal Portfolio
 
-This repository contains the source code for my personal portfolio website, built using HTML, CSS, and JavaScript, and hosted on GitHub Pages.
+Welcome to my personal portfolio repository.
 
-The website highlights my academic journey, professional experience, research projects, and aspirations as a data science and AI enthusiast. It is designed to support my job search and PhD applications by providing a clear overview of my background, technical skills, and accomplishments.
+This repository contains the source code for my portfolio website, built with **HTML, CSS and JavaScript** and hosted using **GitHub Pages**.
 
-Sections Included:
+The portfolio presents my professional experience, technical background, research and projects across **Artificial Intelligence, Data, Software Engineering and Technical Consulting**.
 
-Home: Describe my focus research.
+It reflects my progression from software development and data analytics to AI research and technical consulting, combining hands-on technical foundations with experience analysing complex technology projects and working with multidisciplinary teams and stakeholders.
 
-About: Describe me and my career.
+## Live Portfolio
 
-Research: A showcase of my academic work, research contributions, and applied data science projects.
+Visit the portfolio:
 
-Thesis: Overview of my Master's thesis, research contributions, and Deploy Services of Network Infrastructure: AI/ML Digital Deploy 
+https://chaymaebennouri.github.io/chaymaebennouri/
 
-Thesis: A highlight of my experience in the professional world
 
-Resume: Summary of my skills and experience.
+## About Me
 
-Contact: How to reach me, including email, LinkedIn, and GitHub.
+I am a **Technical Consultant** with a background in **software engineering, artificial intelligence, machine learning, data analytics and collective intelligence**.
 
-Features
+My experience spans technical analysis, AI and data systems, software architectures, technical scoping, research, stakeholder collaboration and technical communication.
 
-Responsive design for mobile and desktop
+I am particularly interested in:
 
-Dark mode toggle for user preference
+- Artificial Intelligence & Machine Learning
+- Data Analytics & Data-Intensive Systems
+- Software Engineering
+- Cloud & Distributed Systems
+- Intelligent Systems
+- Collective Intelligence
+- Technology & Innovation
 
-PDF resume and project report downloads
 
-Contact form integration (via Formspree)
+## Portfolio Sections
 
-Live Website
+### Home
+An overview of my professional profile, technical focus, experience and featured work.
 
-You can view the live website here: https://chaymaebennouri.github.io/chaymaebennouri
+### About
+My background, career journey, technical interests and progression across software, data, AI and technical consulting.
+
+### Research
+A collection of technical and research projects covering artificial intelligence, machine learning, data analysis, collective intelligence and human decision-making.
+
+### Thesis
+An overview of my Master's thesis conducted in collaboration with **Nokia**, exploring deep learning, computer vision and ensemble learning for industrial image classification.
+
+### Experience
+My professional journey across technical consulting, AI research, software engineering, data engineering and business intelligence.
+
+### Resume
+A structured overview of my professional experience, education, technical skills and areas of expertise.
+
+### Contact
+Ways to connect with me through email, LinkedIn and GitHub, together with a contact form for professional enquiries and collaboration opportunities.
+
+
+## Technologies
+
+The portfolio is built using:
+
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
+
+
+## Features
+
+- Responsive design for desktop, tablet and mobile
+- Dark and light themes
+- Persistent theme preference
+- Responsive navigation
+- Professional project and experience cards
+- Smooth page interactions
+- Back-to-top navigation
+- Contact form integration using Formspree
+- Accessible and mobile-friendly layout
+
+
+## Purpose
+
+This portfolio serves as a central place to present my:
+
+- Professional experience
+- Technical consulting work
+- AI and machine learning background
+- Data and software engineering skills
+- Research experience
+- Technical projects
+- Academic background
+
+It is designed to support opportunities across **AI, Data, Software and Technology Consulting**, while also showcasing my research background and interdisciplinary experience.
+
+
+## Connect
+
+**LinkedIn:**  
+https://www.linkedin.com/in/chaymae-bennouri
+
+**GitHub:**  
+https://github.com/Chaymaebennouri
+
+**Portfolio:**  
+https://chaymaebennouri.github.io/chaymaebennouri/
+
+
+---
+
+© 2026 Chaymae Bennouri
