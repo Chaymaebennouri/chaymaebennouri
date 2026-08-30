@@ -322,21 +322,22 @@ footer .container{
   position: fixed;
   right: 16px;
   bottom: 16px;
+  z-index: 60;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
 }
+
 #backToTop.show{
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
-}
-#backToTop button{
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border-strong);
-  background: var(--surface-solid);
-  color: var(--text);
-  box-shadow: var(--shadow-soft);
-  cursor: pointer;
-  font-weight: 800;
 }
 
 /* ---------- Responsive ---------- */
