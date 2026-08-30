@@ -1,4 +1,4 @@
-# Chaymae Bennouri — Personal Portfolio
+# Chaymae Bennouri Personal Portfolio
 
 Welcome to my personal portfolio repository.
 
