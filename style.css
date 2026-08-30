@@ -118,17 +118,13 @@ a:focus-visible, button:focus-visible{
 }
 
 /* ---------- Layout ---------- */
-.container{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: var(--space-4);
+header{
+  position: static;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.35);
 }
 
-/* ---------- Header (sticky, flexible) ---------- */
-header{
-  position: fixed;
-  top: 0;
-}
 body.light header{
   background: rgba(255,255,255,0.72);
 }
@@ -303,11 +299,6 @@ footer .container{
   position: fixed;
   right: 16px;
   bottom: 16px;
-  z-index: 60;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(8px);
-  transition: opacity 160ms ease, transform 160ms ease;
 }
 #backToTop.show{
   opacity: 1;
