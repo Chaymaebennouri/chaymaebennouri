@@ -1,132 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Research | Chaymae Bennouri</title>
- <link rel="stylesheet" href="style.css" />
+
+  <title>Thesis | Chaymae Bennouri</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
+
 <body>
 
+
 <header>
+
   <div class="container header-wrap">
+
     <div class="header-top">
-      <img src="assets/moi.jpeg" alt="Chaymae Bennouri" class="profile-pic"/>
+
+      <img
+        src="assets/moi.jpeg"
+        alt="Chaymae Bennouri"
+        class="profile-pic"
+      />
+
       <div class="header-title">
+
         <h1>Chaymae Bennouri</h1>
-        <h2>Technical R&D Consultant · AI, Data & Software</h2>
+
+        <h2>
+          Technical Consultant · AI · Data · Software
+        </h2>
+
       </div>
+
     </div>
 
+
     <nav class="nav-pills">
+
       <a href="index.html">Home</a>
+
       <a href="about.html">About</a>
+
       <a href="research.html">Research</a>
+
       <a class="active" href="thesis.html">Thesis</a>
+
       <a href="experience.html">Experience</a>
+
       <a href="resume.html">Resume</a>
+
       <a href="contact.html">Contact</a>
+
     </nav>
 
-    <button id="themeToggle" class="dark-toggle" type="button">Dark</button>
+
+    <button
+      id="themeToggle"
+      class="dark-toggle"
+      type="button"
+    >
+      Dark
+    </button>
+
   </div>
+
 </header>
 
-  <main class="container">  
-    <section>
-      <h2>Thesis Overview</h2>
 
-      <p class="meta">
-        Master’s in Collective Intelligence · 2023–2024 · Industrial Research Thesis
-      </p>
 
-      <p>
-        This thesis investigates how advanced deep learning architectures and ensemble learning
-        can improve the robustness and accuracy of industrial image classification systems.
-        The research was conducted as part of an industry-embedded internship at Nokia Morocco,
-        focusing on AI/ML digital deployment workflows.
-      </p>
-    </section>
+<main class="container">
 
-    <section>
-      <h2>Research Questions</h2>
-      <ul>
-        <li>
-          How can advanced CNN architectures be optimized to improve generalization
-          in industrial image classification tasks?
-        </li>
-        <li>
-          To what extent does ensemble learning mitigate overfitting and class imbalance
-          in real-world industrial datasets?
-        </li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Methodology</h2>
-      <ul>
-        <li>Comparative evaluation of CNN architectures (NASNetLarge, InceptionV3, DenseNet, EfficientNet)</li>
-        <li>Two dataset structuring strategies to study cross-domain generalization</li>
-        <li>Data preprocessing and augmentation to reduce overfitting</li>
-        <li>Feature extraction using YOLOv5</li>
-        <li>Ensemble learning via prediction aggregation</li>
-        <li>Evaluation using accuracy, precision, recall, F1-score, and confusion matrices</li>
-      </ul>
-    </section>
+  <!-- HERO -->
 
-    <section>
-      <h2>Key Results</h2>
-      <ul>
-        <li>
-          Best individual model accuracy: <strong>62.37%</strong> (DenseNet169)
-        </li>
-        <li>
-          Ensemble model accuracy: <strong>69%</strong>, demonstrating improved generalization
-        </li>
-        <li>
-          Ensemble learning reduced variance and overfitting compared to single-model approaches
-        </li>
-      </ul>
-    </section>
+  <section class="page-hero">
 
-    <section>
-      <h2>Limitations & Future Work</h2>
-      <ul>
-        <li>Significant class imbalance between “Pass” and “Fail” samples</li>
-        <li>Limited dataset size for certain checkpoints</li>
-        <li>High computational cost for large CNN architectures</li>
-        <li>
-          Future work includes cost-sensitive learning, improved resampling strategies,
-          and hybrid human-in-the-loop feature extraction
-        </li>
-      </ul>
-    </section>
+    <h1>Master’s Thesis</h1>
 
-    <section>
-      <h2>Supervision & Affiliation</h2>
-      <p>
-        <strong>Academic Supervisor:</strong> Prof. Mark Klein (UM6P)  
-        <br/>
-        <strong>Industry Supervisor:</strong> Oussama Ghandari (Nokia)
-      </p>
-    </section>
+    <p class="subtitle">
+      Applied research in
+      <strong>deep learning, computer vision and ensemble learning</strong>,
+      conducted in collaboration with Nokia to investigate the
+      robustness and generalisation of industrial image classification systems.
+    </p>
 
-    <!--<section>
-      <h2>Thesis Document</h2>
-      <p>
-        <a href="assets/Projects/thesischaymaebennouri.pdf" target="_blank"> Download Full Master’s Thesis (PDF)  </a>
-      </p>
-    </section> -->
-  </main>
-  <footer>
-    <div class="container">
-      <p>Thank you for visiting my portfolio! Feel free to reach out if you have any questions or opportunities.</p>
-      <p>© 2025 Chaymae Bennouri</p>
-   </div>
-  </footer>
-  <script src="script.js"></script>
+  </section>
+
+
+
+  <!-- OVERVIEW -->
+
+  <section class="card">
+
+    <h2>Thesis Overview</h2>
+
+    <p class="meta">
+      Master’s in Collective Intelligence · 2023–2024 · Nokia
+    </p>
+
+    <p>
+      This thesis investigated how advanced deep learning architectures
+      and ensemble learning techniques could enhance the performance and
+      robustness of industrial image classification systems.
+    </p>
+
+    <p>
+      The research was conducted as part of an industry-embedded internship
+      at Nokia Morocco and focused on the classification of industrial images
+      under real-world constraints including
+      <strong>class imbalance, limited labelled data, model overfitting
+      and computational cost</strong>.
+    </p>
+
+  </section>
+
+
+
+  <!-- RESEARCH QUESTIONS -->
+
+  <section class="card">
+
+    <h2>Research Questions</h2>
+
+    <ul>
+
+      <li>
+        How can advanced CNN architectures enhance generalisation
+        in industrial image classification tasks?
+      </li>
+
+      <li>
+        To what extent can ensemble learning reduce the effects
+        of overfitting and class imbalance in real-world datasets?
+      </li>
+
+      <li>
+        How do individual deep learning architectures compare
+        when evaluated under industrial data constraints?
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- METHODOLOGY -->
+
+  <section class="card">
+
+    <h2>Methodology</h2>
+
+    <ul>
+
+      <li>
+        Comparative evaluation of CNN architectures including
+        <strong>NASNetLarge, InceptionV3, DenseNet and EfficientNet</strong>
+      </li>
+
+      <li>
+        Two dataset structuring approaches to evaluate
+        cross-domain generalisation
+      </li>
+
+      <li>
+        Data preprocessing and augmentation to reduce overfitting
+        and increase training diversity
+      </li>
+
+      <li>
+        Feature extraction using <strong>YOLOv5</strong>
+      </li>
+
+      <li>
+        Ensemble learning through prediction aggregation
+      </li>
+
+      <li>
+        Evaluation using
+        <strong>accuracy, precision, recall, F1-score
+        and confusion matrices</strong>
+      </li>
+
+      <li>
+        Error analysis to investigate model behaviour
+        beyond overall classification accuracy
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- RESULTS -->
+
+  <section class="card">
+
+    <h2>Key Results</h2>
+
+    <ul>
+
+      <li>
+        Best-performing individual architecture:
+        <strong>DenseNet169</strong>
+      </li>
+
+      <li>
+        Best individual model accuracy:
+        <strong>62.37%</strong>
+      </li>
+
+      <li>
+        Ensemble model accuracy:
+        <strong>69%</strong>
+      </li>
+
+      <li>
+        Ensemble learning produced stronger overall
+        generalisation than the best individual model
+      </li>
+
+      <li>
+        Model evaluation highlighted the impact of
+        dataset imbalance and limited examples across
+        industrial checkpoints
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- TECHNICAL CHALLENGES -->
+
+  <section class="card">
+
+    <h2>Technical Challenges</h2>
+
+    <ul>
+
+      <li>
+        Significant imbalance between
+        <strong>Pass</strong> and <strong>Fail</strong> samples
+      </li>
+
+      <li>
+        Limited labelled training data for certain
+        industrial checkpoints
+      </li>
+
+      <li>
+        Risk of overfitting when training high-capacity CNN architectures
+      </li>
+
+      <li>
+        High computational requirements associated with
+        large deep learning architectures
+      </li>
+
+      <li>
+        Differences in image characteristics across
+        industrial inspection environments
+      </li>
+
+    </ul>
+
+  </section>
+
+
+
+  <!-- FUTURE WORK -->
+
+  <section class="card">
+
+    <h2>Limitations & Future Work</h2>
+
+    <p>
+      Further work could investigate
+      <strong>cost-sensitive learning, enhanced resampling techniques,
+      transfer learning and larger labelled datasets</strong>
+      to address class imbalance and improve model generalisation.
+    </p>
+
+    <p>
+      Human-in-the-loop approaches could also be explored to combine
+      automated feature extraction with expert feedback in cases where
+      model confidence is low or training data remains limited.
+    </p>
+
+  </section>
+
+
+
+  <!-- SUPERVISION -->
+
+  <section class="card">
+
+    <h2>Supervision & Affiliation</h2>
+
+    <p>
+      <strong>Academic Supervisor:</strong>
+      Prof. Mark Klein · Mohammed VI Polytechnic University (UM6P)
+    </p>
+
+    <p>
+      <strong>Industry Supervisor:</strong>
+      Oussama Ghandari · Nokia
+    </p>
+
+  </section>
+
+
+
+  <!-- RESEARCH LINK -->
+
+  <section class="card contact-cta">
+
+    <h2>Explore More Research</h2>
+
+    <p>
+      Explore additional projects across artificial intelligence,
+      machine learning, data analysis, collective intelligence
+      and human decision-making.
+    </p>
+
+    <p style="margin-top: 12px;">
+      <a href="research.html">
+        View Research & Technical Projects →
+      </a>
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="container">
+
+    <p>
+      Exploring technology, data and intelligent systems through
+      analysis, research and collaboration.
+    </p>
+
+    <p>
+      © 2026 Chaymae Bennouri
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 
 </body>
+
 </html>
-
-
