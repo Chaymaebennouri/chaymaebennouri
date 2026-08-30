@@ -21,7 +21,7 @@
     const btn = document.getElementById("themeToggle");
     if (btn) {
       const isLight = document.body.classList.contains("light");
-      btn.textContent = isLight ? "☀️ Light" : "🌙 Dark";
+      btn.textContent = isLight ? "Light" : "Dark";
       btn.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
     }
   }
