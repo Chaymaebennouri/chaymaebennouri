@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact – Chaymae Bennouri</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Chaymae Bennouri</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header>
   <div class="container header-wrap">
+
     <div class="header-top">
-      <img src="assets/moi.jpeg" alt="Chaymae Bennouri" class="profile-pic"/>
+      <img
+        src="assets/moi.jpeg"
+        alt="Chaymae Bennouri"
+        class="profile-pic"
+      />
+
       <div class="header-title">
         <h1>Chaymae Bennouri</h1>
-        <h2>R&D Consultant · AI/ML · Collective Intelligence</h2>
+        <h2>Technical Consultant · AI · Data · Software</h2>
       </div>
     </div>
 
@@ -27,59 +35,196 @@
       <a class="active" href="contact.html">Contact</a>
     </nav>
 
-    <button id="themeToggle" class="dark-toggle" type="button">🌙 Dark</button>
+    <button id="themeToggle" class="dark-toggle" type="button">
+      🌙 Dark
+    </button>
+
   </div>
 </header>
 
-  
-  <main class="container">
-    <section class="page-hero">
-      <h1>Contact Me</h1>
-      <p class="subtitle">
-        I’d love to hear from you! Whether you have questions, collaboration ideas, or just want to say hello, feel free to reach out.
-      </p>
-    </section>
-    <section>
-      <h2>Contact Information</h2>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:chaymae.bennouri@gmail.com">chaymae.bennouri@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/chaymae-bennouri" target="_blank">linkedin.com/in/chaymae-bennouri</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/Chaymaebennouri" target="_blank">github.com/Chaymaebennouri</a></li>
-      </ul>
-    </section>
 
-    <section>
-      <h2>Send Me a Message</h2>
-      <form action="https://formspree.io/f/movlwaew" method="POST">
-        <p>Feel free to reach out with any questions, collaboration ideas, or just to say hello!</p>
-        <label for="name"> Your Name: </label><br>
-        <input type="text" name="name" required><br><br>
+<main class="container">
 
-        <label for="email"> Your Email: </label><br>
-        <input type="email" name="email" required><br><br>
+  <!-- HERO -->
+  <section class="page-hero">
 
-        <label for="message"> Your Message: </label><br>
-        <textarea name="message" rows="5" required></textarea><br><br>
-        
-        <!-- your other form fields go here -->
-        <button type="submit">Send</button>
-        <input type="hidden" name="_redirect" value="thankyou.html" />
-        <input type="hidden" name="_subject" value="New message from Chaymae Bennouri's portfolio contact form" />
-      </form>
-    </section>
+    <h1>Let’s Connect</h1>
 
-    <section>
-      <h2>My Location</h2>
-      <iframe src="https://www.google.com/maps?q=Rabat,+Morocco&output=embed" width="100%" height="300" style="border:0;"></iframe>
-    </section>
-  </main>
+    <p class="subtitle">
+      Whether you’d like to discuss a professional opportunity,
+      collaboration, AI or data project, research initiative,
+      or simply connect, I’d be happy to hear from you.
+    </p>
+
+  </section>
+
+
+  <!-- CONTACT LINKS -->
+  <section class="card">
+
+    <h2>Get in Touch</h2>
+
+    <p>
+      You can reach me directly by email or connect with me through
+      LinkedIn and GitHub.
+    </p>
+
+    <div class="contact-links">
+
+      <a
+        class="contact-item"
+        href="mailto:chaymae.bennouri@gmail.com"
+      >
+        <span class="contact-icon">✉️</span>
+
+        <span>
+          <strong>Email</strong><br>
+          chaymae.bennouri@gmail.com
+        </span>
+      </a>
+
+
+      <a
+        class="contact-item"
+        href="https://linkedin.com/in/chaymae-bennouri"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="contact-icon">💼</span>
+
+        <span>
+          <strong>LinkedIn</strong><br>
+          linkedin.com/in/chaymae-bennouri
+        </span>
+      </a>
+
+
+      <a
+        class="contact-item"
+        href="https://github.com/Chaymaebennouri"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="contact-icon">💻</span>
+
+        <span>
+          <strong>GitHub</strong><br>
+          github.com/Chaymaebennouri
+        </span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- MESSAGE FORM -->
+  <section class="card">
+
+    <h2>Send Me a Message</h2>
+
+    <p>
+      Have an opportunity, project or idea in mind?
+      Send me a message and I’ll be happy to connect.
+    </p>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/movlwaew"
+      method="POST"
+    >
+
+      <div class="form-group">
+        <label for="name">Name</label>
+
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </div>
+
+
+      <div class="form-group">
+        <label for="email">Email</label>
+
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+        />
+      </div>
+
+
+      <div class="form-group">
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Tell me about the opportunity, project or collaboration..."
+          required
+        ></textarea>
+      </div>
+
+
+      <button class="contact-submit" type="submit">
+        Send Message
+      </button>
+
+      <input
+        type="hidden"
+        name="_redirect"
+        value="thankyou.html"
+      />
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New message from Chaymae Bennouri's portfolio"
+      />
+
+    </form>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="card contact-cta">
+
+    <h2>Open to Opportunities & Collaboration</h2>
+
+    <p>
+      I’m particularly interested in conversations around
+      <strong>AI, data, software engineering and technology consulting</strong>,
+      as well as interdisciplinary projects involving intelligent systems
+      and data-driven innovation.
+    </p>
+
+  </section>
+
+</main>
+
 
 <footer>
-    <div class="container">
-     <p>Thank you for visiting my portfolio! Feel free to reach out if you have any questions or opportunities.</p>
-     <p>© 2025 Chaymae Bennouri</p>
-   </div>
+  <div class="container">
+
+    <p>
+      Exploring technology, data and intelligent systems through
+      analysis, research and collaboration.
+    </p>
+
+    <p>© 2026 Chaymae Bennouri</p>
+
+  </div>
 </footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
