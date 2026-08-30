@@ -76,19 +76,26 @@
   }
 
   // -------- Smooth scrolling with header offset
-  function getHeaderOffset() {
-    const header = document.querySelector("header");
-    return header ? header.getBoundingClientRect().height + 10 : 70;
-  }
+ function getHeaderOffset() {
+  return 20;
+}
 
-  function scrollToHash(hash) {
-    const id = hash.replace("#", "");
-    const target = document.getElementById(id);
-    if (!target) return;
+function scrollToHash(hash) {
+  const id = hash.replace("#", "");
+  const target = document.getElementById(id);
 
-    const top = target.getBoundingClientRect().top + window.pageYOffset - getHeaderOffset();
-    window.scrollTo({ top, behavior: "smooth" });
-  }
+  if (!target) return;
+
+  const top =
+    target.getBoundingClientRect().top +
+    window.pageYOffset -
+    20;
+
+  window.scrollTo({
+    top,
+    behavior: "smooth"
+  });
+}
 
   function wireAnchorLinks() {
     // Only intercept same-page anchors (#...)
