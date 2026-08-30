@@ -126,12 +126,8 @@ a:focus-visible, button:focus-visible{
 
 /* ---------- Header (sticky, flexible) ---------- */
 header{
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
-  background: rgba(2,6,23,0.45);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
 }
 body.light header{
   background: rgba(255,255,255,0.72);
