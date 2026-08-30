@@ -451,3 +451,160 @@ header .container{
   .hero-grid{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
 }
+
+/* =========================================
+   Contact Page
+   ========================================= */
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  color: var(--text);
+  text-decoration: none;
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.contact-item strong {
+  color: var(--text);
+}
+
+.contact-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+
+/* Contact Form */
+
+.contact-form {
+  margin-top: var(--space-4);
+}
+
+.form-group {
+  margin-bottom: var(--space-3);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  background: var(--surface-2);
+  color: var(--text);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+
+  font: inherit;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--ring);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+
+/* Send Button */
+
+.contact-submit {
+  display: inline-block;
+
+  padding: 12px 22px;
+
+  background: var(--accent);
+  color: #ffffff;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+
+/* Final Contact CTA */
+
+.contact-cta {
+  text-align: center;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    padding: var(--space-3);
+  }
+
+}
+
+
