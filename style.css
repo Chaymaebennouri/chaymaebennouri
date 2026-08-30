@@ -118,9 +118,23 @@ a:focus-visible, button:focus-visible{
 }
 
 /* ---------- Layout ---------- */
+
+.container{
+  max-width: var(--max);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+/* ---------- Header ---------- */
+
 header{
   position: static;
+  display: block;
   width: 100%;
+  top: auto;
+  left: auto;
+  right: auto;
   border-bottom: 1px solid var(--border);
   background: rgba(15, 23, 42, 0.35);
 }
@@ -130,9 +144,18 @@ body.light header{
 }
 
 header .container{
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
   text-align: center;
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+main.container{
+  display: block;
+  width: 100%;
+  clear: both;
 }
 
 /* Profile image */
